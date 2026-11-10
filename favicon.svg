@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Fieldnotes open book and growing leaf">
+  <rect width="64" height="64" rx="15" fill="#116548"/>
+  <path d="M32 25c-6-5-13-7-21-4v26c8-3 15-1 21 4 6-5 13-7 21-4V21c-8-3-15-1-21 4Z" fill="#f4f7f2" stroke="#d9f4b5" stroke-linejoin="round" stroke-width="2.5"/>
+  <path d="M32 26v24" fill="none" stroke="#116548" stroke-linecap="round" stroke-width="2.5"/>
+  <path d="M32 26V15m0 6c-8 0-12-4-12-9 7-1 12 2 12 9Zm0-2c1-7 6-10 12-9 0 6-4 10-12 9Z" fill="#d9f4b5" stroke="#d9f4b5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+</svg>

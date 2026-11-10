@@ -122,6 +122,13 @@ const server = http.createServer(async (req, res) => {
     return sendJson(res, 200, { ready, provider: PROVIDER, model: MODEL, localOnly: true, masteryDecisions: false });
   }
   if (req.method === 'POST' && url.pathname === '/api/tutor') return handleTutor(req, res);
+  if (req.method === 'GET' && url.pathname === '/favicon.svg') {
+    try {
+      const icon = fs.readFileSync(path.join(ROOT, 'favicon.svg'));
+      res.writeHead(200, { ...SECURITY_HEADERS, 'Content-Type': 'image/svg+xml; charset=utf-8', 'Cache-Control': 'public, max-age=3600' });
+      return res.end(icon);
+    } catch { return sendJson(res, 404, { error: 'The site icon could not be read.' }); }
+  }
   if (req.method === 'GET' && (url.pathname === '/' || url.pathname === '/index.html')) {
     try {
       const html = fs.readFileSync(path.join(ROOT, 'index.html'));
