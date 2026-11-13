@@ -4,7 +4,7 @@ This is the updated, data-driven learning site for the Backend Engineering and A
 
 ## Run the site
 
-Use Node.js 20 or newer; no package installation or build step is needed.
+Use a supported Node.js LTS release (Node.js 24 or 26 recommended); no package installation or build step is needed.
 
 ```sh
 node server.js
@@ -14,7 +14,7 @@ Then open <http://127.0.0.1:4173>. The server binds to localhost only. Opening `
 
 ## Tutor setup
 
-The app does not fabricate tutor replies. The server has a provider adapter and defaults to local Ollama at `http://127.0.0.1:11434`, using `qwen2.5:1.5b` unless `TUTOR_MODEL` is set. Ollama is not bundled or installed by this project. If you choose to install it, start Ollama and download a model that fits your machine. Until the local service and selected model are available, the tutor reports that it is unavailable and keeps your question in the local learning record.
+The app does not fabricate tutor replies. The server has a provider adapter and defaults to local Ollama at `http://127.0.0.1:11434`, using `qwen3.5:2b` unless `TUTOR_MODEL` is set. Ollama is not bundled or installed by this project. If you choose to install it, run `ollama run qwen3.5:2b` once to download and start the default model. This model download is about 2.7–3.1 GB, so choose a smaller or larger Ollama model to fit your device and set `TUTOR_MODEL` accordingly. Until the local service and selected model are available, the tutor reports that it is unavailable and keeps your question in the local learning record.
 
 No paid model API is configured or called. The browser never holds a model key. A future provider can implement the same server-side `chat({ messages })` adapter without changing the browser API contract; review any provider cost and privacy terms before enabling one.
 

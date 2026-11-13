@@ -10,7 +10,7 @@ const HOST = '127.0.0.1';
 const PORT = Number(process.env.PORT || 4173);
 const PROVIDER = process.env.TUTOR_PROVIDER || 'ollama';
 const OLLAMA_URL = process.env.OLLAMA_URL || 'http://127.0.0.1:11434';
-const MODEL = process.env.TUTOR_MODEL || 'qwen2.5:1.5b';
+const MODEL = process.env.TUTOR_MODEL || 'qwen3.5:2b';
 const MAX_BODY = 96 * 1024;
 
 const SECURITY_HEADERS = {
